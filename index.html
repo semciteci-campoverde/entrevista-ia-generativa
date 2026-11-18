@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="referrer" content="origin-when-cross-origin">
+  <meta name="referrer" content="no-referrer">
   <title>Pesquisa: IA generativa e trabalho docente no 5º ano – Campo Verde-MT</title>
   <meta name="description" content="Formulário de entrevista da pesquisa de mestrado de Rigoberto Ximenes Lopes (PPGEn IFMT/UNIC). Acesso restrito aos professores convidados.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -228,6 +228,20 @@
       text-align: center;
       padding: 36px 20px;
     }
+    .codigo {
+      font-family: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, monospace;
+      font-size: 1.55rem;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: var(--green);
+      background: var(--green-soft);
+      border: 1px dashed var(--green-mid);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: inline-block;
+      margin: 4px 0 12px;
+      user-select: all;
+    }
     .thanks .check {
       width: 64px;
       height: 64px;
@@ -281,7 +295,7 @@
         <form id="formulario" novalidate>
           <div class="bloco" id="secao-tcle">
             <h2 id="tcle-title">Termo de Consentimento Livre e Esclarecido (TCLE)</h2>
-            <p class="lead">Leia o termo com atenção antes de decidir participar. Depois, informe seu nome e registre o consentimento.</p>
+            <p class="lead">Leia o termo com atenção antes de decidir participar e, em seguida, registre o consentimento. A participação é anônima: não pedimos nome, e-mail nem outros dados de identificação. Ao enviar, você receberá um código aleatório.</p>
             <article class="tcle" tabindex="0" aria-label="Texto completo do Termo de Consentimento Livre e Esclarecido">
               <h3>Título da pesquisa</h3>
               <p>Inteligência artificial generativa e trabalho docente nos anos iniciais: possibilidades, limites e desafios para o uso pedagógico no 5º ano do Ensino Fundamental em Campo Verde-MT.</p>
@@ -326,7 +340,7 @@
                 <li>retirar sua autorização para a gravação;</li>
                 <li>desistir da pesquisa a qualquer momento.</li>
               </ul>
-              <p>Qualquer decisão nesse sentido será respeitada e não produzirá prejuízo profissional, institucional ou pessoal. Em caso de desistência, os dados ainda identificáveis serão excluídos e destruídos, salvo se você autorizar expressamente sua utilização.</p>
+              <p>Qualquer decisão nesse sentido será respeitada e não produzirá prejuízo profissional, institucional ou pessoal. Em caso de desistência, informe ao pesquisador apenas o código de participação recebido ao enviar este formulário. Os dados correspondentes a esse código serão excluídos e destruídos, salvo se você autorizar expressamente sua utilização. Não é necessário informar nome.</p>
               <p>O pesquisador não possui poder hierárquico, disciplinar ou avaliativo sobre você. A participação ou a recusa não interferirá na atribuição de turmas, na avaliação de desempenho, na progressão funcional ou em qualquer aspecto de sua vida profissional.</p>
 
               <h3>Riscos</h3>
@@ -351,9 +365,9 @@
               <p>Esses benefícios são esperados, mas não podem ser garantidos.</p>
 
               <h3>Sigilo e confidencialidade</h3>
-              <p>Seus dados serão codificados e desidentificados por meio de código alfanumérico, como P01, P02 ou P03. As escolas não serão identificadas nominalmente nos resultados.</p>
-              <p>Informações que possam permitir sua identificação ou a identificação de estudantes, familiares, colegas e outras pessoas serão retiradas das transcrições. Os resultados poderão ser apresentados na dissertação, em artigos científicos, eventos acadêmicos e materiais formativos, sempre com preservação da identidade dos participantes.</p>
-              <p>A direção da escola não receberá suas respostas individuais nem será informada sobre quem aceitou ou recusou o convite, exceto quando isso for inevitável para a organização do local e do horário da entrevista.</p>
+              <p>Nesta etapa online, a participação é anônima. Não são coletados nome, e-mail nem outros dados de identificação do(a) participante. Cada participação recebe um código aleatório gerado neste formulário, no formato P-XXXXXX (por exemplo, P-7K3QX9), exibido ao final do envio. As escolas não serão identificadas nominalmente nos resultados.</p>
+              <p>Informações que possam permitir sua identificação ou a identificação de estudantes, familiares, colegas e outras pessoas devem ser evitadas nas respostas e, se aparecerem, serão retiradas. Os resultados poderão ser apresentados na dissertação, em artigos científicos, eventos acadêmicos e materiais formativos, sempre com preservação da identidade dos participantes.</p>
+              <p>A direção da escola não receberá suas respostas individuais nem será informada sobre quem aceitou ou recusou o convite.</p>
 
               <h3>Gravação e armazenamento dos dados</h3>
               <p>Quando autorizada, a entrevista será gravada exclusivamente em áudio. Não haverá gravação de vídeo nem utilização da imagem do participante.</p>
@@ -379,15 +393,12 @@
           </div>
 
           <div class="bloco" id="secao-consentimento">
-            <label class="field" for="nome">Nome completo do(a) participante</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required>
-            <p id="erro-nome" class="error" role="alert"></p>
-
-            <p class="field" id="rotulo-consentimento" style="margin-top:18px;">Consentimento</p>
+            <p class="field" id="rotulo-consentimento">Consentimento</p>
+            <p class="hint">A participação é anônima. Não é necessário informar nome. Ao enviar, será gerado um código aleatório de participação.</p>
             <div class="opcoes" role="radiogroup" aria-labelledby="rotulo-consentimento">
               <label class="opcao">
-                <input type="radio" name="consentimento" value="Li o termo e concordo voluntariamente em participar desta pesquisa, respondendo à entrevista por escrito." required>
-                <span>Li o termo e concordo voluntariamente em participar desta pesquisa, respondendo à entrevista por escrito.</span>
+                <input type="radio" name="consentimento" value="Li o termo e concordo voluntariamente em participar desta pesquisa de forma anônima, respondendo à entrevista por escrito." required>
+                <span>Li o termo e concordo voluntariamente em participar desta pesquisa de forma anônima, respondendo à entrevista por escrito.</span>
               </label>
               <label class="opcao">
                 <input type="radio" name="consentimento" value="Não concordo em participar.">
@@ -510,6 +521,9 @@
         <div class="check" aria-hidden="true">✓</div>
         <h2>Obrigado pela participação!</h2>
         <p id="texto-obrigado">Suas respostas foram registradas com sigilo.</p>
+        <p class="hint">Seu código de participação (anônimo):</p>
+        <p id="codigo-participacao" class="codigo"></p>
+        <p class="hint">Guarde este código. Ele não revela quem você é, mas permite falar com o pesquisador sobre esta participação, se precisar.</p>
       </section>
     </main>
 
@@ -521,6 +535,8 @@
   <script>
     const SENHA_HASH = "f5a135a2c751beacbda9c2cadc17debe1699e67b6634a0b5165fac37d9ad1428";
     const FORM_ENDPOINT = "https://formsubmit.co/ajax/eaprigo@gmail.com";
+    const FORM_URL_PUBLICA = "https://semciteci-campoverde.github.io/entrevista-ia-generativa/";
+    let codigoParticipacao = "";
     const PERGUNTAS = [
       ["p1", "1. Há quanto tempo você atua como professor na rede municipal de Campo Verde-MT e há quanto tempo trabalha com turmas do 5º ano do Ensino Fundamental?"],
       ["p2", "2. Você já participou de alguma formação relacionada às tecnologias digitais ou à inteligência artificial? Caso tenha participado, como foi essa experiência?"],
@@ -541,6 +557,17 @@
       const dados = new TextEncoder().encode(texto);
       const hash = await crypto.subtle.digest("SHA-256", dados);
       return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+
+    function gerarCodigoParticipacao() {
+      const alfabeto = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      const bytes = new Uint8Array(6);
+      crypto.getRandomValues(bytes);
+      let corpo = "";
+      for (let i = 0; i < bytes.length; i++) {
+        corpo += alfabeto[bytes[i] % alfabeto.length];
+      }
+      return "P-" + corpo;
     }
 
     function dataHoraCuiaba() {
@@ -595,8 +622,7 @@
       erro.textContent = "";
       document.getElementById("gate").classList.add("hidden");
       document.getElementById("entrevista").classList.remove("hidden");
-      document.getElementById("nome").focus();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.getElementById("secao-tcle").scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     document.querySelectorAll('input[name="consentimento"]').forEach((el) => {
@@ -605,46 +631,40 @@
 
     document.getElementById("formulario").addEventListener("submit", async (ev) => {
       ev.preventDefault();
-      const nome = document.getElementById("nome").value.trim();
       const consentimento = consentimentoSelecionado();
-      const erroNome = document.getElementById("erro-nome");
       const erroCons = document.getElementById("erro-consentimento");
       const erroEnvio = document.getElementById("erro-envio");
       const status = document.getElementById("status-envio");
       const botao = document.getElementById("btn-enviar");
-      erroNome.textContent = "";
       erroCons.textContent = "";
       erroEnvio.textContent = "";
-      let ok = true;
-      if (!nome) {
-        erroNome.textContent = "Informe o nome completo do(a) participante.";
-        ok = false;
-      }
       if (!consentimento) {
         erroCons.textContent = "Selecione uma opção de consentimento.";
-        ok = false;
-      }
-      if (!ok) {
-        const alvo = !nome ? document.getElementById("nome") : document.getElementById("secao-consentimento");
-        alvo.scrollIntoView({ behavior: "smooth", block: "center" });
-        if (!nome) document.getElementById("nome").focus();
+        document.getElementById("secao-consentimento").scrollIntoView({ behavior: "smooth", block: "center" });
         return;
       }
 
       const recusa = consentimento.startsWith("Não concordo");
       const quando = dataHoraCuiaba();
+      if (!codigoParticipacao) {
+        codigoParticipacao = gerarCodigoParticipacao();
+      }
+      const codigo = codigoParticipacao;
       const respostas = {};
       const linhas = [
         "Entrevista – IA generativa e trabalho docente (5º ano, Campo Verde-MT)",
         "",
-        "Nome completo: " + nome,
+        "Código de participação: " + codigo,
         "Consentimento: " + consentimento,
         "Data e hora: " + quando,
-        ""
+        "",
+        "Participação anônima: não foram coletados nome, e-mail nem outros dados de identificação."
       ];
       if (recusa) {
+        linhas.push("");
         linhas.push("A pessoa não concordou em participar. As perguntas da entrevista não foram apresentadas/enviadas.");
       } else {
+        linhas.push("");
         linhas.push("Respostas da entrevista:");
         linhas.push("");
         PERGUNTAS.forEach(([id, titulo]) => {
@@ -657,16 +677,19 @@
       }
 
       const payload = {
-        _subject: "Entrevista IA generativa – resposta de " + nome,
+        _subject: "Entrevista IA generativa – resposta " + codigo,
         _template: "box",
         _captcha: "false",
-        _url: window.location.href,
-        _honey: document.getElementById("website").value,
-        "Nome completo": nome,
+        _url: FORM_URL_PUBLICA,
+        "Código de participação": codigo,
         "Consentimento": consentimento,
         "Data e hora": quando,
         "Relatório": linhas.join("\n")
       };
+      const honey = document.getElementById("website").value;
+      if (honey) {
+        payload._honey = honey;
+      }
       if (!recusa) {
         PERGUNTAS.forEach(([id, titulo]) => {
           payload[titulo] = respostas[titulo];
@@ -678,6 +701,7 @@
       try {
         const resp = await fetch(FORM_ENDPOINT, {
           method: "POST",
+          referrerPolicy: "no-referrer",
           headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
@@ -692,15 +716,16 @@
         }
         document.getElementById("entrevista").classList.add("hidden");
         document.getElementById("obrigado").classList.remove("hidden");
+        document.getElementById("codigo-participacao").textContent = codigo;
         const texto = document.getElementById("texto-obrigado");
         if (recusa) {
-          texto.textContent = "Sua decisão foi registrada. A recusa não produz qualquer prejuízo. Obrigado pela atenção.";
+          texto.textContent = "Sua decisão foi registrada de forma anônima. A recusa não produz qualquer prejuízo. Obrigado pela atenção.";
         } else {
-          texto.textContent = "Suas respostas foram registradas com sigilo.";
+          texto.textContent = "Suas respostas foram registradas com sigilo, identificadas apenas pelo código abaixo.";
         }
         window.scrollTo({ top: 0, behavior: "smooth" });
       } catch (err) {
-        erroEnvio.textContent = "Não foi possível enviar agora. Verifique a conexão e tente novamente. Se o problema continuar, avise o pesquisador.";
+        erroEnvio.textContent = "Não foi possível enviar agora. Verifique a conexão e tente novamente. Se o problema continuar, avise o pesquisador e informe o código " + codigo + ", se já o tiver anotado.";
         status.textContent = "";
         botao.disabled = false;
       }

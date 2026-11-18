@@ -4,6 +4,4 @@ Página pública do roteiro de entrevista da pesquisa de mestrado de Rigoberto X
 
 O acesso à entrevista é protegido por senha, informada pelo pesquisador aos professores convidados.
 
-As respostas são enviadas por e-mail ao pesquisador (uma mensagem por participante) por meio do serviço FormSubmit.
-
-Este repositório existe apenas para hospedar a página no GitHub Pages.
+A participação é anônima: não são coletados nome, e-mail nem outros dados de identificação. Cada envio recebe um código aleatório (no formato P-XXXXXX), exibido ao participante e usado no e-mail enviado ao pesquisador pelo FormSubmit.
