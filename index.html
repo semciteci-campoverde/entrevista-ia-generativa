@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pesquisa: IA generativa e trabalho docente no 5º ano – Campo Verde-MT</title>
+  <meta name="description" content="Formulário de entrevista da pesquisa de mestrado de Rigoberto Ximenes Lopes (PPGEn IFMT/UNIC). Acesso restrito aos professores convidados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #0e3d30;
+      --green-mid: #1a5c48;
+      --green-soft: #e8f2ed;
+      --gold: #b0893a;
+      --gold-soft: #f3ead6;
+      --ink: #1c1917;
+      --ink-soft: #4a453e;
+      --line: #d9d1c4;
+      --paper: #fffdf8;
+      --page: #f4efe6;
+      --danger: #8b2e2e;
+      --ok: #1a5c48;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(14, 61, 48, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #e7f0ea 0%, transparent 55%),
+        var(--page);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 64px;
+    }
+    header.hero {
+      background: linear-gradient(160deg, var(--green) 0%, #164e3d 60%, #1d3f36 100%);
+      color: #f8f4ec;
+      border-radius: 22px;
+      padding: 28px 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    header.hero p.kicker {
+      margin: 0 0 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #f3ead6;
+    }
+    header.hero h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(1.45rem, 4vw, 1.95rem);
+      line-height: 1.25;
+      font-weight: 600;
+      margin: 0 0 14px;
+    }
+    header.hero .meta {
+      margin: 0;
+      color: #efe7d6;
+      font-size: 0.95rem;
+    }
+    header.hero .meta + .meta { margin-top: 8px; }
+    header.hero .time {
+      display: inline-block;
+      margin-top: 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(243,234,214,0.25);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+    main { margin-top: 20px; }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.35rem;
+      margin: 0 0 8px;
+      color: var(--green);
+    }
+    h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.12rem;
+      margin: 0 0 6px;
+      color: var(--green);
+    }
+    .lead, .hint { color: var(--ink-soft); }
+    .hint { font-size: 0.9rem; margin: 0 0 8px; }
+    label.field {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    input[type="password"],
+    input[type="text"],
+    textarea {
+      width: 100%;
+      font: inherit;
+      font-size: 16px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid #cfc6b8;
+      border-radius: 12px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--green-mid);
+      box-shadow: 0 0 0 3px rgba(26, 92, 72, 0.18);
+    }
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      background: var(--green);
+      color: #fffdf8;
+      font: inherit;
+      font-weight: 700;
+      padding: 12px 18px;
+      cursor: pointer;
+      min-height: 48px;
+    }
+    .btn:hover { background: var(--green-mid); }
+    .btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--green);
+      border: 1px solid var(--green-mid);
+    }
+    .btn-secondary:hover { background: var(--green-soft); }
+    .error {
+      color: var(--danger);
+      font-size: 0.92rem;
+      margin: 8px 0 0;
+      min-height: 1.2em;
+    }
+    .tcle {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfaf6;
+      padding: 8px 18px 18px;
+      max-height: min(62vh, 620px);
+      overflow: auto;
+    }
+    .tcle h3 {
+      margin: 22px 0 8px;
+      font-size: 1.05rem;
+    }
+    .tcle p, .tcle li { font-size: 0.98rem; color: #2b2723; }
+    .tcle ul { margin: 0 0 8px; padding-left: 1.2em; }
+    .tcle li { margin: 0 0 6px; }
+    .bloco {
+      margin-top: 22px;
+      padding-top: 8px;
+    }
+    .bloco + .bloco {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+    .pergunta { margin: 0 0 22px; }
+    .opcoes {
+      display: grid;
+      gap: 10px;
+    }
+    .opcao {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .opcao:has(input:checked) {
+      border-color: var(--green-mid);
+      background: var(--green-soft);
+    }
+    .opcao input { margin-top: 4px; accent-color: var(--green); }
+    .orientacoes {
+      background: var(--green-soft);
+      border: 1px solid #cfe0d7;
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    .hp {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .status { margin: 0; color: var(--ink-soft); }
+    .thanks {
+      text-align: center;
+      padding: 36px 20px;
+    }
+    .thanks .check {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+    }
+    footer {
+      margin-top: 28px;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+    .hidden { display: none !important; }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 20px, 760px); padding-top: 12px; }
+      header.hero, .card { padding: 20px 16px; border-radius: 16px; }
+      .tcle { padding: 4px 12px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <p class="kicker">PPGEn IFMT / UNIC</p>
+      <h1>Pesquisa: IA generativa e trabalho docente no 5º ano – Campo Verde-MT</h1>
+      <p class="meta">Pesquisa de mestrado de Rigoberto Ximenes Lopes, Programa de Pós-Graduação em Ensino, em ampla associação entre o Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso (IFMT) e a Universidade de Cuiabá (UNIC).</p>
+      <p class="meta">Orientação: Prof.ª Dr.ª Edione Teixeira de Carvalho.</p>
+      <p class="time">Acesso restrito aos professores convidados · tempo estimado: cerca de 30 minutos</p>
+    </header>
+
+    <main>
+      <section id="gate" class="card" aria-labelledby="gate-title">
+        <h2 id="gate-title">Acesso à entrevista</h2>
+        <p class="lead">Digite a senha enviada pelo pesquisador para continuar.</p>
+        <form id="form-senha" novalidate>
+          <label class="field" for="senha">Senha de acesso</label>
+          <input id="senha" name="senha" type="password" autocomplete="off" required>
+          <p id="erro-senha" class="error" role="alert"></p>
+          <div class="acoes">
+            <button class="btn" type="submit">Entrar</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="entrevista" class="card hidden" aria-labelledby="tcle-title">
+        <form id="formulario" novalidate>
+          <div class="bloco" id="secao-tcle">
+            <h2 id="tcle-title">Termo de Consentimento Livre e Esclarecido (TCLE)</h2>
+            <p class="lead">Leia o termo com atenção antes de decidir participar. Depois, informe seu nome e registre o consentimento.</p>
+            <article class="tcle" tabindex="0" aria-label="Texto completo do Termo de Consentimento Livre e Esclarecido">
+              <h3>Título da pesquisa</h3>
+              <p>Inteligência artificial generativa e trabalho docente nos anos iniciais: possibilidades, limites e desafios para o uso pedagógico no 5º ano do Ensino Fundamental em Campo Verde-MT.</p>
+
+              <h3>Pesquisador responsável</h3>
+              <p>Rigoberto Ximenes Lopes, mestrando do Programa de Pós-Graduação em Ensino, desenvolvido em ampla associação entre o Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso e a Universidade de Cuiabá.</p>
+
+              <h3>Orientadora</h3>
+              <p>Prof.ª Dr.ª Edione Teixeira de Carvalho.</p>
+
+              <h3>Convite à participação</h3>
+              <p>Você está sendo convidado(a) a participar voluntariamente desta pesquisa por atuar como professor(a) do 5º ano do Ensino Fundamental da rede municipal urbana de Campo Verde-MT.</p>
+              <p>Antes de decidir, leia atentamente as informações apresentadas. Você poderá fazer perguntas e solicitar esclarecimentos ao pesquisador sempre que considerar necessário.</p>
+
+              <h3>Objetivo da pesquisa</h3>
+              <p>A pesquisa tem como objetivo analisar como professores do 5º ano do Ensino Fundamental da rede municipal urbana de Campo Verde-MT utilizam, percebem ou deixam de utilizar a inteligência artificial generativa em sua trabalho docente, considerando as finalidades pedagógicas e os desafios profissionais, éticos, normativos e didáticos envolvidos.</p>
+              <p>A pesquisa também pretende identificar as necessidades formativas relatadas pelos docentes em relação ao uso crítico, ético e pedagógico dessas ferramentas.</p>
+
+              <h3>Procedimentos</h3>
+              <p>Nesta etapa, a entrevista será respondida por escrito, por meio deste formulário online. Sua participação ocorrerá por meio de uma entrevista semiestruturada, realizada presencialmente, em data, horário e local previamente acordados. A entrevista terá duração estimada de 30 minutos e será conduzida pelo pesquisador com base em perguntas abertas relacionadas ao objeto do estudo.</p>
+              <p>Serão abordados assuntos como:</p>
+              <ul>
+                <li>compreensão sobre inteligência artificial generativa;</li>
+                <li>formas de uso ou não uso;</li>
+                <li>possíveis finalidades pedagógicas;</li>
+                <li>planejamento e produção de materiais;</li>
+                <li>avaliação e devolutivas pedagógicas;</li>
+                <li>confiabilidade das informações;</li>
+                <li>autoria e proteção de dados;</li>
+                <li>orientações institucionais;</li>
+                <li>necessidades de formação continuada.</li>
+              </ul>
+              <p>A entrevista poderá ser gravada em áudio somente mediante sua autorização específica, registrada neste TCLE. Caso você não autorize a gravação, poderá participar por meio de entrevista registrada por anotações escritas, desde que concorde com esse procedimento.</p>
+              <p>Você será orientado(a) a não mencionar nomes ou informações que permitam identificar estudantes, familiares, colegas ou outras pessoas.</p>
+
+              <h3>Participação voluntária</h3>
+              <p>Sua participação é inteiramente voluntária. Você poderá:</p>
+              <ul>
+                <li>recusar este convite;</li>
+                <li>deixar de responder qualquer pergunta;</li>
+                <li>solicitar pausa durante a entrevista;</li>
+                <li>retirar sua autorização para a gravação;</li>
+                <li>desistir da pesquisa a qualquer momento.</li>
+              </ul>
+              <p>Qualquer decisão nesse sentido será respeitada e não produzirá prejuízo profissional, institucional ou pessoal. Em caso de desistência, os dados ainda identificáveis serão excluídos e destruídos, salvo se você autorizar expressamente sua utilização.</p>
+              <p>O pesquisador não possui poder hierárquico, disciplinar ou avaliativo sobre você. A participação ou a recusa não interferirá na atribuição de turmas, na avaliação de desempenho, na progressão funcional ou em qualquer aspecto de sua vida profissional.</p>
+
+              <h3>Riscos</h3>
+              <p>Você poderá sentir desconforto, constrangimento, insegurança ou receio de julgamento ao falar sobre sua prática profissional e sua formação. Também poderá ocorrer cansaço durante a entrevista ou quebra de confidencialidade. Esses riscos serão prevenidos e reduzidos pelas medidas descritas a seguir.</p>
+              <p>Para reduzir esses riscos:</p>
+              <ul>
+                <li>a entrevista será realizada em espaço reservado;</li>
+                <li>gestores e colegas não estarão presentes;</li>
+                <li>não existem respostas certas ou erradas;</li>
+                <li>você poderá deixar de responder qualquer pergunta;</li>
+                <li>poderá solicitar pausa ou encerramento;</li>
+                <li>os resultados não serão utilizados para avaliar professores ou escolas;</li>
+                <li>nomes e informações identificáveis serão retirados;</li>
+                <li>os resultados serão apresentados de maneira agrupada;</li>
+                <li>os arquivos serão armazenados em local protegido.</li>
+              </ul>
+              <p>Caso você manifeste desconforto, a entrevista será imediatamente interrompida e somente continuará se essa for sua vontade. Se ocorrer dano material ou imaterial relacionado à pesquisa, o pesquisador providenciará acompanhamento e assistência integral, imediata e gratuita, adequada à natureza do dano e pelo tempo necessário, sem prejuízo do direito à indenização.</p>
+
+              <h3>Benefícios</h3>
+              <p>Não são previstos benefícios diretos ou imediatos aos participantes.</p>
+              <p>Como benefício indireto, a pesquisa poderá ampliar o conhecimento sobre as experiências e as necessidades formativas dos professores relacionadas à inteligência artificial generativa.</p>
+              <p>Esses benefícios são esperados, mas não podem ser garantidos.</p>
+
+              <h3>Sigilo e confidencialidade</h3>
+              <p>Seus dados serão codificados e desidentificados por meio de código alfanumérico, como P01, P02 ou P03. As escolas não serão identificadas nominalmente nos resultados.</p>
+              <p>Informações que possam permitir sua identificação ou a identificação de estudantes, familiares, colegas e outras pessoas serão retiradas das transcrições. Os resultados poderão ser apresentados na dissertação, em artigos científicos, eventos acadêmicos e materiais formativos, sempre com preservação da identidade dos participantes.</p>
+              <p>A direção da escola não receberá suas respostas individuais nem será informada sobre quem aceitou ou recusou o convite, exceto quando isso for inevitável para a organização do local e do horário da entrevista.</p>
+
+              <h3>Gravação e armazenamento dos dados</h3>
+              <p>Quando autorizada, a entrevista será gravada exclusivamente em áudio. Não haverá gravação de vídeo nem utilização da imagem do participante.</p>
+              <p>Após a entrevista, o arquivo será transferido para um HD externo de uso exclusivo da pesquisa, protegido por senha e mantido em local seguro. Confirmada a transferência, o áudio será apagado do gravador.</p>
+              <p>Os áudios, as transcrições e os demais registros serão mantidos por cinco anos após o encerramento da pesquisa. Depois desse prazo, serão descartados de forma segura.</p>
+              <p>Os dados não serão armazenados em serviços de nuvem, aplicativos de mensagens ou equipamentos compartilhados. Áudios, transcrições e falas dos participantes não serão inseridos no ChatGPT nem em outras ferramentas de inteligência artificial generativa.</p>
+              <p>O acesso será restrito ao pesquisador e à orientadora.</p>
+
+              <h3>Pagamento, despesas e ressarcimento</h3>
+              <p>Você não receberá pagamento. A entrevista será organizada para não gerar despesas. Caso haja despesa necessária e diretamente decorrente da participação, o pesquisador fará o ressarcimento integral do valor efetivamente gasto, em parcela única, por Pix, transferência bancária ou dinheiro, conforme sua preferência, em até cinco dias úteis após a comunicação e a apresentação do comprovante, quando aplicável.</p>
+
+              <h3>Indenização</h3>
+              <p>Caso ocorra dano material ou imaterial diretamente relacionado à pesquisa, você terá direito à indenização nos termos da legislação vigente. Este termo não retira nem limita esse direito.</p>
+
+              <h3>Acesso aos resultados</h3>
+              <p>Após a conclusão da pesquisa, uma síntese dos resultados, escrita em linguagem acessível, será disponibilizada aos participantes interessados. A dissertação e as demais publicações preservarão o sigilo dos participantes e das unidades escolares.</p>
+
+              <h3>Contatos</h3>
+              <p>Para esclarecer dúvidas sobre a pesquisa, entre em contato com:</p>
+              <p>Pesquisador responsável: Rigoberto Ximenes Lopes. Telefone: (66) 99621-8186. E-mail: eaprigo@gmail.com. Endereço: Rua Ervandi Alves Khols, nº 1196, Bairro Belvedere, Campo Verde-MT.</p>
+              <p>O Comitê de Ética em Pesquisa do IFMT (CEP/IFMT) é um colegiado independente que protege os direitos, a segurança e o bem-estar dos participantes e avalia os aspectos éticos da pesquisa. Para dúvidas sobre seus direitos ou para comunicar ocorrências: Avenida Senador Filinto Müller, nº 963, térreo, Bairro Duque de Caxias, Cuiabá-MT, CEP 78043-400; telefone (65) 98163-0106; e-mail cep@ifmt.edu.br; atendimento de segunda a sexta-feira, das 8h às 12h, com atendimento presencial mediante agendamento.</p>
+            </article>
+          </div>
+
+          <div class="bloco" id="secao-consentimento">
+            <label class="field" for="nome">Nome completo do(a) participante</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <p id="erro-nome" class="error" role="alert"></p>
+
+            <p class="field" id="rotulo-consentimento" style="margin-top:18px;">Consentimento</p>
+            <div class="opcoes" role="radiogroup" aria-labelledby="rotulo-consentimento">
+              <label class="opcao">
+                <input type="radio" name="consentimento" value="Li o termo e concordo voluntariamente em participar desta pesquisa, respondendo à entrevista por escrito." required>
+                <span>Li o termo e concordo voluntariamente em participar desta pesquisa, respondendo à entrevista por escrito.</span>
+              </label>
+              <label class="opcao">
+                <input type="radio" name="consentimento" value="Não concordo em participar.">
+                <span>Não concordo em participar.</span>
+              </label>
+            </div>
+            <p id="erro-consentimento" class="error" role="alert"></p>
+          </div>
+
+          <div id="parte-entrevista">
+            <div class="bloco" id="secao-orientacoes">
+              <div class="orientacoes">
+                <h2>Orientações</h2>
+                <p>Sua participação é voluntária; a pesquisa não possui caráter avaliativo ou fiscalizador; não existem respostas certas ou erradas; você pode deixar qualquer pergunta em branco; pode interromper a qualquer momento sem prejuízo. Não mencione nomes ou informações que permitam identificar estudantes, familiares, colegas ou outras pessoas.</p>
+              </div>
+            </div>
+
+            <div class="bloco">
+              <h2>Caracterização profissional</h2>
+              <div class="pergunta">
+                <label class="field" for="p1">1. Há quanto tempo você atua como professor na rede municipal de Campo Verde-MT e há quanto tempo trabalha com turmas do 5º ano do Ensino Fundamental?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p1" name="p1" rows="5"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p2">2. Você já participou de alguma formação relacionada às tecnologias digitais ou à inteligência artificial? Caso tenha participado, como foi essa experiência?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p2" name="p2" rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="bloco">
+              <h2>Compreensão e contato com a IA generativa</h2>
+              <div class="pergunta">
+                <label class="field" for="p3">3. O que você compreende por inteligência artificial generativa e como teve contato com esse tema?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p3" name="p3" rows="5"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p4">4. Você conhece alguma ferramenta de IA generativa? Quais ferramentas conhece e como tomou conhecimento delas?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p4" name="p4" rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="bloco">
+              <h2>Formas de uso ou não uso</h2>
+              <div class="pergunta">
+                <label class="field" for="p5">5. Você utiliza ou já utilizou alguma ferramenta de IA generativa em atividades relacionadas ao seu trabalho docente? Se utiliza, poderia relatar como e em quais situações? Se não utiliza, quais motivos influenciam essa decisão?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p5" name="p5" rows="6"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p6">6. Em sua avaliação, para quais atividades do trabalho docente a IA generativa poderia ou não poderia ser utilizada?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p6" name="p6" rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="bloco">
+              <h2>Avaliação e mediação pedagógica</h2>
+              <div class="pergunta">
+                <label class="field" for="p7">7. Quando recebe ou receberia um conteúdo produzido por IA generativa, quais critérios utilizaria para verificar se ele está correto e adequado aos estudantes do 5º ano?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p7" name="p7" rows="5"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p8">8. Quais cuidados pedagógicos considera necessários antes de utilizar um material produzido com auxílio de IA generativa?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p8" name="p8" rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="bloco">
+              <h2>Aspectos éticos, normativos e institucionais</h2>
+              <div class="pergunta">
+                <label class="field" for="p9">9. Que riscos, limites ou preocupações você identifica no uso da IA generativa no trabalho docente?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p9" name="p9" rows="5"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p10">10. Você conhece alguma orientação da escola, da Secretaria Municipal de Educação ou de outro órgão sobre o uso de inteligência artificial no trabalho docente? Como avalia as orientações existentes ou sua ausência?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p10" name="p10" rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="bloco">
+              <h2>Formação continuada e encerramento</h2>
+              <div class="pergunta">
+                <label class="field" for="p11">11. Como você avalia sua formação atual para tomar decisões sobre o uso ou o não uso da IA generativa em seu trabalho docente?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p11" name="p11" rows="5"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p12">12. Que conhecimentos, orientações ou experiências deveriam integrar uma formação continuada sobre IA generativa para professores do 5º ano?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p12" name="p12" rows="5"></textarea>
+              </div>
+              <div class="pergunta">
+                <label class="field" for="p13">13. Gostaria de acrescentar algo sobre suas necessidades formativas ou sobre o uso da IA generativa no seu trabalho?</label>
+                <p class="hint">Resposta opcional.</p>
+                <textarea id="p13" name="p13" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <label class="hp" for="website" aria-hidden="true">Não preencher</label>
+          <input class="hp" id="website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+          <div class="bloco acoes">
+            <button class="btn" id="btn-enviar" type="submit">Enviar respostas</button>
+            <p id="status-envio" class="status" role="status"></p>
+            <p id="erro-envio" class="error" role="alert"></p>
+          </div>
+        </form>
+      </section>
+
+      <section id="obrigado" class="card thanks hidden" aria-live="polite">
+        <div class="check" aria-hidden="true">✓</div>
+        <h2>Obrigado pela participação!</h2>
+        <p id="texto-obrigado">Suas respostas foram registradas com sigilo.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Pesquisa de mestrado — Programa de Pós-Graduação em Ensino (PPGEn) · IFMT / UNIC</p>
+    </footer>
+  </div>
+
+  <script>
+    const SENHA_HASH = "f5a135a2c751beacbda9c2cadc17debe1699e67b6634a0b5165fac37d9ad1428";
+    const FORM_ENDPOINT = "https://formsubmit.co/ajax/eaprigo@gmail.com";
+    const PERGUNTAS = [
+      ["p1", "1. Há quanto tempo você atua como professor na rede municipal de Campo Verde-MT e há quanto tempo trabalha com turmas do 5º ano do Ensino Fundamental?"],
+      ["p2", "2. Você já participou de alguma formação relacionada às tecnologias digitais ou à inteligência artificial? Caso tenha participado, como foi essa experiência?"],
+      ["p3", "3. O que você compreende por inteligência artificial generativa e como teve contato com esse tema?"],
+      ["p4", "4. Você conhece alguma ferramenta de IA generativa? Quais ferramentas conhece e como tomou conhecimento delas?"],
+      ["p5", "5. Você utiliza ou já utilizou alguma ferramenta de IA generativa em atividades relacionadas ao seu trabalho docente? Se utiliza, poderia relatar como e em quais situações? Se não utiliza, quais motivos influenciam essa decisão?"],
+      ["p6", "6. Em sua avaliação, para quais atividades do trabalho docente a IA generativa poderia ou não poderia ser utilizada?"],
+      ["p7", "7. Quando recebe ou receberia um conteúdo produzido por IA generativa, quais critérios utilizaria para verificar se ele está correto e adequado aos estudantes do 5º ano?"],
+      ["p8", "8. Quais cuidados pedagógicos considera necessários antes de utilizar um material produzido com auxílio de IA generativa?"],
+      ["p9", "9. Que riscos, limites ou preocupações você identifica no uso da IA generativa no trabalho docente?"],
+      ["p10", "10. Você conhece alguma orientação da escola, da Secretaria Municipal de Educação ou de outro órgão sobre o uso de inteligência artificial no trabalho docente? Como avalia as orientações existentes ou sua ausência?"],
+      ["p11", "11. Como você avalia sua formação atual para tomar decisões sobre o uso ou o não uso da IA generativa em seu trabalho docente?"],
+      ["p12", "12. Que conhecimentos, orientações ou experiências deveriam integrar uma formação continuada sobre IA generativa para professores do 5º ano?"],
+      ["p13", "13. Gostaria de acrescentar algo sobre suas necessidades formativas ou sobre o uso da IA generativa no seu trabalho?"]
+    ];
+
+    async function sha256Hex(texto) {
+      const dados = new TextEncoder().encode(texto);
+      const hash = await crypto.subtle.digest("SHA-256", dados);
+      return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+
+    function dataHoraCuiaba() {
+      const fmt = new Intl.DateTimeFormat("pt-BR", {
+        timeZone: "America/Cuiaba",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+      });
+      return fmt.format(new Date()) + " (horário de Cuiabá)";
+    }
+
+    function consentimentoSelecionado() {
+      const el = document.querySelector('input[name="consentimento"]:checked');
+      return el ? el.value : "";
+    }
+
+    function atualizarFluxoConsentimento() {
+      const valor = consentimentoSelecionado();
+      const concorda = valor.startsWith("Li o termo e concordo");
+      const recusa = valor.startsWith("Não concordo");
+      const parte = document.getElementById("parte-entrevista");
+      const botao = document.getElementById("btn-enviar");
+      if (recusa) {
+        parte.classList.add("hidden");
+        botao.textContent = "Encerrar participação";
+      } else {
+        parte.classList.remove("hidden");
+        botao.textContent = "Enviar respostas";
+      }
+      if (concorda || recusa) {
+        document.getElementById("erro-consentimento").textContent = "";
+      }
+    }
+
+    document.getElementById("form-senha").addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      const campo = document.getElementById("senha");
+      const erro = document.getElementById("erro-senha");
+      const digitada = campo.value;
+      const hash = await sha256Hex(digitada);
+      if (hash !== SENHA_HASH) {
+        erro.textContent = "Senha incorreta. Use a senha enviada pelo pesquisador.";
+        campo.focus();
+        campo.select();
+        return;
+      }
+      erro.textContent = "";
+      document.getElementById("gate").classList.add("hidden");
+      document.getElementById("entrevista").classList.remove("hidden");
+      document.getElementById("nome").focus();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.querySelectorAll('input[name="consentimento"]').forEach((el) => {
+      el.addEventListener("change", atualizarFluxoConsentimento);
+    });
+
+    document.getElementById("formulario").addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      const nome = document.getElementById("nome").value.trim();
+      const consentimento = consentimentoSelecionado();
+      const erroNome = document.getElementById("erro-nome");
+      const erroCons = document.getElementById("erro-consentimento");
+      const erroEnvio = document.getElementById("erro-envio");
+      const status = document.getElementById("status-envio");
+      const botao = document.getElementById("btn-enviar");
+      erroNome.textContent = "";
+      erroCons.textContent = "";
+      erroEnvio.textContent = "";
+      let ok = true;
+      if (!nome) {
+        erroNome.textContent = "Informe o nome completo do(a) participante.";
+        ok = false;
+      }
+      if (!consentimento) {
+        erroCons.textContent = "Selecione uma opção de consentimento.";
+        ok = false;
+      }
+      if (!ok) {
+        const alvo = !nome ? document.getElementById("nome") : document.getElementById("secao-consentimento");
+        alvo.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (!nome) document.getElementById("nome").focus();
+        return;
+      }
+
+      const recusa = consentimento.startsWith("Não concordo");
+      const quando = dataHoraCuiaba();
+      const respostas = {};
+      const linhas = [
+        "Entrevista – IA generativa e trabalho docente (5º ano, Campo Verde-MT)",
+        "",
+        "Nome completo: " + nome,
+        "Consentimento: " + consentimento,
+        "Data e hora: " + quando,
+        ""
+      ];
+      if (recusa) {
+        linhas.push("A pessoa não concordou em participar. As perguntas da entrevista não foram apresentadas/enviadas.");
+      } else {
+        linhas.push("Respostas da entrevista:");
+        linhas.push("");
+        PERGUNTAS.forEach(([id, titulo]) => {
+          const texto = (document.getElementById(id).value || "").trim() || "(em branco)";
+          respostas[titulo] = texto;
+          linhas.push(titulo);
+          linhas.push(texto);
+          linhas.push("");
+        });
+      }
+
+      const payload = {
+        _subject: "Entrevista IA generativa – resposta de " + nome,
+        _template: "box",
+        _captcha: "false",
+        _honey: document.getElementById("website").value,
+        "Nome completo": nome,
+        "Consentimento": consentimento,
+        "Data e hora": quando,
+        "Relatório": linhas.join("\n")
+      };
+      if (!recusa) {
+        PERGUNTAS.forEach(([id, titulo]) => {
+          payload[titulo] = respostas[titulo];
+        });
+      }
+
+      botao.disabled = true;
+      status.textContent = "Enviando…";
+      try {
+        const resp = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+        const dados = await resp.json().catch(() => ({}));
+        const sucesso = resp.ok && String(dados.success).toLowerCase() !== "false";
+        const msg = (dados.message || dados.error || "").toString();
+        if (!sucesso) {
+          throw new Error(msg || "Não foi possível enviar as respostas agora.");
+        }
+        document.getElementById("entrevista").classList.add("hidden");
+        document.getElementById("obrigado").classList.remove("hidden");
+        const texto = document.getElementById("texto-obrigado");
+        if (recusa) {
+          texto.textContent = "Sua decisão foi registrada. A recusa não produz qualquer prejuízo. Obrigado pela atenção.";
+        } else {
+          texto.textContent = "Suas respostas foram registradas com sigilo.";
+        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (err) {
+        erroEnvio.textContent = "Não foi possível enviar agora. Verifique a conexão e tente novamente. Se o problema continuar, avise o pesquisador.";
+        status.textContent = "";
+        botao.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
