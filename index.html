@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="origin-when-cross-origin">
   <title>Pesquisa: IA generativa e trabalho docente no 5º ano – Campo Verde-MT</title>
   <meta name="description" content="Formulário de entrevista da pesquisa de mestrado de Rigoberto Ximenes Lopes (PPGEn IFMT/UNIC). Acesso restrito aos professores convidados.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -659,6 +660,7 @@
         _subject: "Entrevista IA generativa – resposta de " + nome,
         _template: "box",
         _captcha: "false",
+        _url: window.location.href,
         _honey: document.getElementById("website").value,
         "Nome completo": nome,
         "Consentimento": consentimento,
@@ -683,7 +685,7 @@
           body: JSON.stringify(payload)
         });
         const dados = await resp.json().catch(() => ({}));
-        const sucesso = resp.ok && String(dados.success).toLowerCase() !== "false";
+        const sucesso = String(dados.success) === "true";
         const msg = (dados.message || dados.error || "").toString();
         if (!sucesso) {
           throw new Error(msg || "Não foi possível enviar as respostas agora.");
